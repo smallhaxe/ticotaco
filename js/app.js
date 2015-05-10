@@ -1,6 +1,32 @@
 $(function() {
     // check to see that the page has loaded, and jQuery is working
     alert('Let\'s get ready Tico Tacooooo!');
+    
+    // define a player
+    function Player(name, team) {
+        this.name = name;
+        this.team = team;
+    }
+    
+    // define a game
+    function Game(player1, player2) {
+        this.p1 = player1;
+        this.p2 = player2;
+        this.log();
+    }
+    
+    Game.prototype.log = function() {
+        for (var i = 1; i <= 9; i++) {
+            var this.turn = 't' + i;
+            console.log(this.turn);
+            Game.prototype.log[this.turn] = {
+                    this.player: 'blank',
+                    this.cell: 'blank',
+                    this.endgame: false;
+            };
+        }
+    }
+    
 });
 // ready(playGame);
 // when the page is ready, play the game
