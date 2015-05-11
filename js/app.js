@@ -1,33 +1,42 @@
-$(function() {
+//$(function() {
     // check to see that the page has loaded, and jQuery is working
-    alert('Let\'s get ready Tico Tacooooo!');
+    exports.start = function start(){
+        console.log('Let\'s get ready Tico Tacooooo!');
+    }
     
     // define a player
-    function Player(name, team) {
+    exports.Player = function Player(name, team) {
         this.name = name;
         this.team = team;
     }
     
     // define a game
-    function Game(player1, player2) {
-        this.p1 = player1;
-        this.p2 = player2;
-        this.log();
-    }
-    
-    Game.prototype.log = function() {
-        for (var i = 1; i <= 9; i++) {
-            var this.turn = 't' + i;
-            console.log(this.turn);
-            Game.prototype.log[this.turn] = {
-                    this.player: 'blank',
-                    this.cell: 'blank',
-                    this.endgame: false;
-            };
-        }
-    }
-    
-});
+    exports.Game = function Game(player1, player2) {
+        return {
+            vs : {
+                p1 : player1,
+                p2 : player2,
+                // this.log();
+                // return (p1 + ' vs ' + p2);
+            },
+            
+            playlist : {},
+            
+            builder : function() {
+                // Game[playlist] = {};
+                for (var i = 1; i <= 9; i++) {
+                    Game[playlist]['t' + i] = {
+                        player: 'blank',
+                        cell: 'blank',
+                        endgame: false,
+                    }
+                }
+                // Game[playlist] = playlist;
+                return Game[playlist];
+            },
+        };
+    };
+//});
 // ready(playGame);
 // when the page is ready, play the game
 
